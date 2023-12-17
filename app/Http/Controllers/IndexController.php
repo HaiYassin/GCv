@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Curriculam;
 use Illuminate\Http\Request;
 use Inertia\Response;
 
