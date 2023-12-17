@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Curriculam;
 use Illuminate\Http\Request;
+use Inertia\Response;
 
 class CurriculamController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): Response
     {
         return inertia(
             'Curriculam/Index', [
@@ -22,9 +23,9 @@ class CurriculamController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(): Response
     {
-        //
+        return inertia('Curriculam/Create');
     }
 
     /**
@@ -38,7 +39,7 @@ class CurriculamController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Curriculam $curriculam)
+    public function show(Curriculam $curriculam): Response
     {
         return inertia(
             'Curriculam/Show', [
